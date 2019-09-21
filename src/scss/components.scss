@@ -90,13 +90,23 @@
     font-size: 12px;
     table {
       width: 100%;
+      .left-align {
+        text-align: left;
+      }
+    }
+    thead {
+      border-bottom: 1px solid #eee;
     }
     th {
-      text-align: center;
+      text-align: right;
       padding: 10px 0;
+      font-weight: normal;
+    }
+    tbody {
+      border-top: 1px solid #eee;
     }
     td {
-      text-align: center;
+      text-align: right;
       padding: 5px 0;
       color: #999;
     }

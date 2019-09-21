@@ -22,6 +22,7 @@ class Table extends React.Component {
     sales.map(s => {
       let tr = document.createElement('tr')
       let td_weekEnding = tr.insertCell(-1)
+      td_weekEnding.className = 'left-align'
       td_weekEnding.innerHTML = `${s.weekEnding.substr(2, 8)}`
 
       let td_retailSales = tr.insertCell(-1)
@@ -46,7 +47,7 @@ class Table extends React.Component {
         <table id='data-table'>
           <thead>
             <tr>
-              <th onClick={e => this.props.sort_data('weekEnding')}>WEEK ENDING</th>
+              <th className='left-align' onClick={e => this.props.sort_data('weekEnding')}>WEEK ENDING</th>
               <th onClick={e => this.props.sort_data('retailSales')}>RETAIL SALES</th>
               <th onClick={e => this.props.sort_data('wholesaleSales')}>WHOLESALE SALES</th>
               <th onClick={e => this.props.sort_data('unitsSold')}>UNITS SOLD</th>
